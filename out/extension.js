@@ -35,17 +35,13 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = activate;
 exports.deactivate = deactivate;
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 const vscode = __importStar(require("vscode"));
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+const headers_1 = require("./headers");
 function activate(context) {
-    const generate = vscode.commands.registerCommand("metrov-headers.generate", () => {
-        console.log("triggered with shortcut");
+    const header = vscode.commands.registerCommand("metrov-headers.generate", () => {
+        (0, headers_1.generate)();
     });
-    context.subscriptions.push(generate);
+    context.subscriptions.push(header);
 }
-// This method is called when your extension is deactivated
 function deactivate() { }
 //# sourceMappingURL=extension.js.map

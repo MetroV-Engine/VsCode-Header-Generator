@@ -22,6 +22,7 @@
       {
         "command": "metrov-headers.generate",
         "key": "ctrl+alt+h",
+        "mac": "cmd+alt+h",
         "when": "editorTextFocus"
       }
     ]
